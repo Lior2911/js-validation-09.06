@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div id="box">
+      <form onsubmit="return clickSubmit()">
+    <h1>sign in:</h1>
+    <label for="fName_label" id="fName_label">first name:</label>
+    <input id="firstName" type="text" placeholder="please enter your first name" required>
+
+    <label for="lName_label" id="lName_label">last name:</label>
+    <input id="lastName" type="text" placeholder="please enter your last name" required>
+
+    <label for="dOBirth_label" id="dOBirth_label">date of birth:</label>
+    <input id="birthDate" type="date"  required>
+
+    <label for="mail_label" id="mail_label">mail:</label>
+    <input id="mail" type="mail" placeholder="please enter your email" required>
+
+    <label for="phone_label" id="phone_label">phone number:</label>
+    <input id="phoneNumber" type="text" required>
+
+    <label for="pass1_label" id="pass1_label">password:</label>
+    <input id="password1" type="password" placeholder="please enter your password" required>
+
+    <label for="pass2_label" id="pass2_label"> confirm password:</label>
+    <input id="password2" type="password" placeholder="please confirm your password" required>
+    <button id="sendForm">submit</button>
+    
+  </form>
+  </div>
+
+  <script src="main.js"></script>
+  
+</body>
+</html>
