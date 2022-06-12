@@ -1,6 +1,6 @@
 
 function clickSubmit(){
-  if(checkFirstName()&&checkLastName()&&checkEmail()&&checkBirth()&&checkPhone()==true){
+  if(checkFirstName()&&checkLastName()&&checkEmail()&&checkBirth()&&checkPhone()&&checkPasswords()==true){
     return true;
   }
   return false;
@@ -52,4 +52,18 @@ function checkPhone(){
   phone_label.style.color = "red";
   return false;
 
+}
+function checkPasswords(){
+  var strongRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{6,10})/
+  if(password1.value==password2.value){
+    if(strongRegex.test(password2)){
+      return true;
+    }
+    phone_label.innerHTML +="<span> password is not strong enough </span>";
+    phone_label.style.color = "red";
+    return false;
+  }
+  phone_label.innerHTML +="<span> passwords are not macth </span>";
+  phone_label.style.color = "red";
+  return false;
 }
